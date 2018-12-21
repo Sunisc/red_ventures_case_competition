@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <nav class="nav">
+    <ul>
+      <li>
+        <a href="index.html">Marketplace Masters</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div>
+
+    Choose your preferences here.
+    <div id="form">
+      <form action="#" method="post">
+        <table>
+          <tr>
+            <td>Type of Car </td>
+            <td>
+              <select id='type'>
+                <option value="Hatchback" name="BodyType" id='hb' />Hatchback<br />
+                <option value="Coupe" name="BodyType" id='cp' />Coupe<br />
+                <option value="Sedan" name="BodyType" id='sd' />Sedan<br />
+                <option value="Minivan" name="BodyType" id='mv' />Minivan<br />
+                <option value="Pickup Truck" name="BodyType" id='pt' />Pickup Truck<br />
+                <option value="Convertible" name="BodyType" id='convertible' />Convertible<br />
+                <option value="SUV / Crossover" name="BodyType" id='suv' />SUV / Crossover<br />
+                <option value="Wagon" name="BodyType" id='wagon' />Wagon<br />
+              </select>
+            </td>
+
+          </tr>
+          <tr>
+            <td>Max Price($)</td>
+            <td>
+              <select id='price'>
+                <option value="10000" name="BodyType" id='hb' />10000<br />
+                <option value="25000" name="BodyType" id='cp' />25000<br />
+                <option value="40000" name="BodyType" id='sd' />40000<br />
+                <option value="50000" name="BodyType" id='mv' />50000<br />
+                <option value="80000" name="BodyType" id='pt' />80000<br />
+                <option value="100000" name="BodyType" id='convertible' />100000<br />
+                <option value="140000" name="BodyType" id='suv' />140000<br />
+                <option value="200000" name="BodyType" id='wagon' />200000<br />
+              </select>
+            </td>
+
+          </tr>
+          <tr>
+            <td>Mileage</td>
+            <td><select id='mileage'>
+              <option value="10000" name="BodyType" id='hb' />10000<br />
+              <option value="25000" name="BodyType" id='cp' />25000<br />
+              <option value="40000" name="BodyType" id='sd' />40000<br />
+              <option value="50000" name="BodyType" id='mv' />50000<br />
+              <option value="80000" name="BodyType" id='pt' />80000<br />
+              <option value="100000" name="BodyType" id='convertible' />100000<br />
+              <option value="140000" name="BodyType" id='suv' />140000<br />
+              <option value="250000" name="BodyType" id='wagon' />200000<br />
+            </select></td>
+          </tr>
+          <tr>
+            <td>Color</td>
+            <td><select id='color'>
+              <option value="Gray" name="BodyType" id='hb' />Gray<br />
+              <option value="Blue" name="BodyType" id='cp' />Blue<br />
+              <option value="Black" name="BodyType" id='sd' />Black<br />
+              <option value="Silver" name="BodyType" id='mv' />Silver<br />
+              <option value="Red" name="BodyType" id='pt' />Red<br />
+              <option value="White" name="BodyType" id='convertible' />White<br />
+              <option value="Unknown" name="BodyType" id='suv' />Unknown<br />
+              <option value="Brown" name="BodyType" id='wagon' />Brown<br />
+            </select></td>
+          </tr>
+          <tr>
+            <td>Make</td>
+            <td><select id='make'>
+              <option value="Audi" name="BodyType" id='hb' />Audi<br />
+              <option value="Toyota" name="BodyType" id='cp' />Toyota<br />
+              <option value="Volkswagen" name="BodyType" id='sd' />Volkswagen<br />
+              <option value="Mercedes-Benz" name="BodyType" id='mv' />Mercedes-Benz<br />
+              <option value="FIAT" name="BodyType" id='pt' />FIAT<br />
+              <option value="BMW" name="BodyType" id='convertible' />BMW<br />
+              <option value="Honda" name="BodyType" id='suv' />Honda<br />
+              <option value="Dodge" name="BodyType" id='wagon' />Dodge<br />
+              <option value="Chevrolet" name="BodyType" id='wagon' />Chevrolet<br />
+              <option value="Volvo" name="BodyType" id='wagon' />Volvo<br />
+              <option value="Ford" name="BodyType" id='wagon' />Ford<br />
+              <option value="Nissan" name="BodyType" id='wagon' />Nissan<br />
+              <option value="Hyundai" name="BodyType" id='wagon' />Hyundai<br />
+              <option value="Mazda" name="BodyType" id='wagon' />Mazda<br />
+              <option value="Bentley" name="BodyType" id='wagon' />Bentley<br />
+              <option value="Subaru" name="BodyType" id='wagon' />Subaru<br />
+              <option value="Hummer" name="BodyType" id='wagon' />Hummer<br />
+              <option value="Lincoln" name="BodyType" id='wagon' />Lincoln<br />
+              <option value="Porsche" name="BodyType" id='wagon' />Porsche<br />
+              <option value="Ram" name="BodyType" id='wagon' />Ram<br />
+              <option value="Lexus" name="BodyType" id='wagon' />Lexus<br />
+              <option value="Acura" name="BodyType" id='wagon' />Acura<br />
+            </select></td>
+          </tr>
+          <td><input type="button" value="Refresh Page" onClick="window.location.reload()"></td>
+        </table>
+      </form>
+    </div>
+  </div>
+
+
+  <div class='wrapper' id='main'>
+
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyD02yGmWbdjT0iFfw_oY-rl3w0vRlUesmc",
+      authDomain: "marketplace-masters.firebaseapp.com",
+      databaseURL: "https://marketplace-masters.firebaseio.com",
+      projectId: "marketplace-masters",
+      storageBucket: "marketplace-masters.appspot.com",
+      messagingSenderId: "702992178409"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+
+  <script>
+    var myCar = new Object();
+    var carList = [];
+
+    $(document).ready(function() {
+      var database = firebase.database();
+      myCar.type = document.getElementById('type').value;
+      if (myCar.type)
+      myCar.price = document.getElementById('price').value;
+      myCar.mileage = document.getElementById('mileage').value;
+      myCar.color = document.getElementById('color').value;
+      myCar.make = document.getElementById('make').value;
+      for (var i = 0; i < 380; i++) {
+        var ref = database.ref('' + i + '');
+        ref.on('value', printData, errData);
+      }
+
+      write();
+    });
+
+
+
+
+
+    function printData(data) {
+      var car = data.val();
+      var keys = Object.keys(car);
+      var values = Object.values(car);
+
+      var bool = false;
+      for (var i = 0; i < keys.length; i++) {
+        if (keys[i] == 'bodyType' && values[i] == ('' + myCar.type + '')) {
+          for (var j = 0; j < keys.length; j++) {
+            if (keys[j] == 'price' && values[j] <= myCar.price) {
+              for (var k = 0; k < keys.length; k++) {
+                if (keys[k] == 'mileage' && values[k] <= myCar.mileage) {
+                  for (var l = 0; l < keys.length; l++) {
+                    if (keys[l] == 'exteriorColorName' && values[l] == ('' + myCar.color + '')) {
+                      for (var m = 0; m < keys.length; m++) {
+                        if (keys[m] == 'makeName' && values[m] == ('' + myCar.make + '')) {
+                          bool = true;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+        if (bool == true) {
+          var div = document.createElement("div");
+          document.getElementById('main').appendChild(div);
+          var type = document.createElement("div");
+          div.appendChild(type);
+          var year = document.createElement("div");
+          div.appendChild(year);
+          var price = document.createElement("div");
+          div.appendChild(price);
+          var make = document.createElement("div");
+          div.appendChild(make);
+          var model = document.createElement("div");
+          div.appendChild(model);
+          var mileage = document.createElement("div");
+          div.appendChild(mileage);
+          var img = document.createElement("img");
+          div.appendChild(img);
+          var button = document.createElement("BUTTON");
+          div.appendChild(button);
+          for (var i = 0; i < keys.length; i++) {
+            if (keys[i] == 'bodyType') {
+              type.innerHTML = 'Type: ' + values[i];
+            }
+            if (keys[i] == 'carYear') {
+              year.innerHTML = 'Year: ' + values[i];
+            }
+            if (keys[i] == 'mainPictureUrl') {
+              img.src = values[i];
+            }
+            if (keys[i] == 'makeName') {
+              make.innerHTML = 'Make: ' + values[i];
+            }
+            if (keys[i] == 'mileage') {
+              mileage.innerHTML = 'Mileage: ' + values[i];
+            }
+            if (keys[i] == 'modelName') {
+              model.innerHTML = 'Model: ' + values[i];
+            }
+            if (keys[i] == 'price') {
+              price.innerHTML = 'Price: $' + values[i];
+            }
+          }
+        }
+
+      }
+
+      function errData(data) {
+        alert("error");
+      }
+
+      function clicked(i) {
+        var database = firebase.database();
+        var ref = database.ref(i);
+      }
+
+      function write() {
+        var database = firebase.database();
+        var type = database.ref('type')
+      }
+  </script>
+</body>
+
+</html>

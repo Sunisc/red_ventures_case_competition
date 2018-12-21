@@ -1,0 +1,39 @@
+<div>
+  Choose your preferences here.
+  <div id="form">
+    <form action="#" method="post">
+      <table>
+        <tr>
+          <td>Type of Car </td>
+          <select id='type'>
+            <option value="Hatchback" name="BodyType" id='hb' />Hatchback<br />
+            <option value="Coupe" name="BodyType" id='cp' />Coupe<br />
+            <option value="Sedan" name="BodyType" id='sd' />Sedan<br />
+            <option value="Mini Van" name="BodyType" id='mv' />Mini Van<br />
+            <option value="Pickup Truck" name="BodyType" id='pt' />Pickup Truck<br />
+            <option value="Convertible" name="BodyType" id='convertible' />Convertible<br />
+            <option value="SUV / Crossover" name="BodyType" id='suv' />SUV / Crossover<br />
+            <option value="Wagon" name="BodyType" id='wagon' />Wagon<br />
+          </select>
+        </tr>
+        <tr>
+          <td>Max Price($)</td>
+          <td><input type="number" name="Price" min="500" max="150000" id='price' /></td>
+        </tr>
+        <tr>
+          <td>Mileage(Within 20K)</td>
+          <td><input type="number" name="Mileage" min="0" max="350000" id='mileage' /></td>
+        </tr>
+        <tr>
+          <td>Color</td>
+          <td><input type="text" name="Color" id='color' /></td>
+        </tr>
+        <tr>
+          <td>Make</td>
+          <td><input type="text" name="Make" id='make' /></td>
+        </tr>
+        <td><input type="submit" value="Send Info" id='send'/></td>
+      </table>
+    </form>
+  </div>
+</div>

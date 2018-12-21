@@ -1,0 +1,45 @@
+.nav>ul {
+  list-style-type: none;
+  padding: 1em;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.nav>ul>li>a {
+  text-decoration: none;
+  color: black;
+  font: 1em Arial;
+  text-transform: uppercase;
+  padding: .5em;
+}
+
+.nav>ul>li {
+  display: inline-block;
+  margin: 0 3em;
+}
+
+.nav>ul>li>a:hover {
+  background-color: white;
+}
+
+.nav {
+  background: grey;
+}
+
+.wrapper>div {
+  background-color: wheat;
+  padding: 1em;
+}
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns:repeat(3, 1fr);
+  grid-gap: 1em;
+  grid-auto-rows: minmax(300px, auto);
+  text-align: center;
+}
